@@ -19,4 +19,10 @@ public class Pair {
         }
         return List.copyOf(pairNames);
     }
+
+    public boolean hasTwoMoreSameNames(Pair subjectPair) {
+        List<String> crewPairNames = this.providePairNames();
+        List<String> subjectPairNames = subjectPair.providePairNames();
+        return crewPairNames.containsAll(subjectPairNames) || subjectPairNames.containsAll(crewPairNames);
+    }
 }
