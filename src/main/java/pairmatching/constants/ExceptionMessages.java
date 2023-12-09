@@ -2,7 +2,8 @@ package pairmatching.constants;
 
 public enum ExceptionMessages {
     NULL_INPUT("null은 입력할 수 없습니다."),
-    EMPTY_INPUT("값을 입력해주세요.");
+    EMPTY_INPUT("값을 입력해주세요."),
+    WRONG_FEATURE_INPUT("1~3, Q를 입력해주세요.");
 
     private final String exceptionMessage;
     private final String ERROR_TAG = "[ERROR] ";
