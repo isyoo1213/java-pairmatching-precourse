@@ -6,7 +6,7 @@ import java.util.Map;
 public class Crew {
     private final Map<String, String> crew;
 
-    Crew(String crewName, String courseName) {
+    public Crew(String crewName, String courseName) {
         Map<String, String> tempMap = new LinkedHashMap<>();
         tempMap.put("crewName", crewName);
         tempMap.put("courseName", courseName);
