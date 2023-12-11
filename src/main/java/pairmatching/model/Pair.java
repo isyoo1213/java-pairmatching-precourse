@@ -6,7 +6,7 @@ import java.util.List;
 public class Pair {
     private final List<Crew> crewPair;
 
-    private Pair(List<Crew> crews) {
+    public Pair(List<Crew> crews) {
         List<Crew> tempList = new ArrayList<>(crews);
         crewPair = List.copyOf(tempList);
     }
@@ -23,6 +23,19 @@ public class Pair {
     public boolean hasTwoMoreSameNames(Pair subjectPair) {
         List<String> crewPairNames = this.providePairNames();
         List<String> subjectPairNames = subjectPair.providePairNames();
-        return crewPairNames.containsAll(subjectPairNames) || subjectPairNames.containsAll(crewPairNames);
+        int sameCrewCount = 0;
+        for (String crewPairName : crewPairNames) {
+            for (String subjectPairName : subjectPairNames) {
+                sameCrewCount += isSameNames(crewPairName, subjectPairName);
+            }
+        }
+        return sameCrewCount >= 2;
+    }
+
+    private int isSameNames(String crewPairName, String subjectPairName) {
+        if (crewPairName.equals(subjectPairName)) {
+            return 1;
+        }
+        return 0;
     }
 }
