@@ -30,4 +30,12 @@ public class Crews {
         }
         return Map.copyOf(tempMap);
     }
+
+    public Crew provideCrewByName(Courses course, String crewName) {
+        List<Crew> crewsByCourse = crewsInfo.get(course);
+        return crewsByCourse.stream()
+                .filter((crew) -> crew.provideCrewName().equals(crewName))
+                .findFirst()
+                .orElseThrow();
+    }
 }
