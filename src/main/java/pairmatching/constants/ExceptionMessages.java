@@ -8,6 +8,7 @@ public enum ExceptionMessages {
     WRONG_COURSE_INPUT("존재하지 않는 코스입니다."),
     WRONG_LEVEL_INPUT("존재하지 않는 레벨입니다."),
     WRONG_MISSION_INPUT("레벨에 포함되지 않는 미션입니다."),
+    WRONG_REMATCHING_INPUT("네/아니오를 입력해주세요."),
     WRONG_MISSION_FORMAT("쉼표 구분자(,)를 이용해 코스, 레벨, 미션을 입력해주세요.");
 
     private final String exceptionMessage;
